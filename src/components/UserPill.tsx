@@ -1,5 +1,5 @@
-import { Box, Circle, CloseButton, Flex, Text, useTheme, WrapItem } from '@chakra-ui/react';
 import React from 'react';
+import { Box, Circle, CloseButton, Flex, Text, useTheme, WrapItem } from '@chakra-ui/react';
 import { FiMail } from 'react-icons/fi';
 import { userToString } from '../utils';
 import { EmailUser, isUser, User } from '../utils/types';
