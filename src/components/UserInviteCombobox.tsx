@@ -71,6 +71,7 @@ function UserInviteCombobox(props: UserInviteComboboxProps) {
     getComboboxProps,
     reset,
   } = useCombobox({
+    id: 'user-invite-combobox',
     items: allUsersFiltered,
     itemToString: userToString,
     initialInputValue,
@@ -166,6 +167,7 @@ function UserInviteCombobox(props: UserInviteComboboxProps) {
           ))}
           <WrapItem>
             <Input
+              data-testid="user-invite-combobox-input"
               ref={inputRef}
               height="24px"
               padding={0}
