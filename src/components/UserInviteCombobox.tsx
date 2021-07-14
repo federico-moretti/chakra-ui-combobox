@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Button, Flex, Input, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { useCombobox } from 'downshift';
 import { useDebounce } from '../hooks';
@@ -102,6 +102,10 @@ function UserInviteCombobox(props: UserInviteComboboxProps) {
   function handleBoxClick() {
     if (inputRef?.current) inputRef.current.focus();
   }
+
+  React.useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
+  }, []);
 
   function handleInputFocus() {
     if (listUsers.length > 0 && inputValue) openMenu();
